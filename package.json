@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"next dev\"",
-    "build": "tinacms build --skip-indexing && next build",
+    "dev": "TINA_PUBLIC_IS_LOCAL=true tinacms dev -c \"next dev\"",
+    "dev:prod": "TINA_PUBLIC_IS_LOCAL=false tinacms dev -c \"next dev\"",
+    "build": "tinacms build && next build",
     "start": "tinacms build --skip-indexing && next start",
     "export": "npm run build && next export",
     "lint": "eslint . --ext .ts,.tsx"
@@ -29,6 +30,7 @@
     "@tailwindcss/typography": "^0.5.8",
     "date-fns": "^2.23.0",
     "next": "^13.3.1",
+    "next-auth": "^4.24.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.2.0",
