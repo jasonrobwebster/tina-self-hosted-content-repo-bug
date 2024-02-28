@@ -30,7 +30,6 @@ export default isLocal
         owner,
         repo,
         token,
-        rootPath: "eca",
       }),
       databaseAdapter: new RedisLevel<string, Record<string, any>>({
         redis: {
